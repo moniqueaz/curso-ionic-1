@@ -31,8 +31,9 @@
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
+    <script src="js/controller.js"></script>
   </head>
-  <body ng-app="starter">
+  <body ng-app="starter" ng-controller="ListagemController">
 
     <ion-pane>
       <ion-header-bar class="bar-stable">
@@ -40,17 +41,8 @@
       </ion-header-bar>
       <ion-content>
           <ion-list>
-              <ion-item>BMW 120i</ion-item>
-              <ion-item>ONIX 1.6</ion-item>
-              <ion-item>Fiesta 2.0</ion-item>
-              <ion-item>C3 1.0</ion-item>        
-              <ion-item>Uno Fire</ion-item>
-              <ion-item>Sentra 2.0</ion-item>
-              <ion-item>Astra Sedan</ion-item>
-              <ion-item>Vectra 2.0 Turbo</ion-item>
-              <ion-item>Hilux 4x4</ion-item>
-              <ion-item>Montana Cabine dupla</ion-item>
-            </ion-list>    
+            <ion-item ng-repeat="carro in listaDeCarros">{{carro}}</ion-item>
+          </ion-list>    
       </ion-content>
       <ion-footer-bar class="bar-stable">
         <h1 class="title">Rua Vergueiro, 3185</h1>
