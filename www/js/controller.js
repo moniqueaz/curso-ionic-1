@@ -1,7 +1,7 @@
 angular.module('starter')
 .controller('ListagemController', function($scope){
 
-    $scope.listaDeCarros = [{"nome" : 'BMD', "preco" : 70000}];
+    $scope.listaDeCarros = [{"nome" : 'BMW 210i', "preco" : 70000}];
 });
 
 angular.module('starter')
