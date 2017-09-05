@@ -14,6 +14,11 @@ angular.module('starter')
         url : '/carroescolhido/:carro',
         templateUrl: 'templates/carroescolhido.html',
         controller: 'CarroEscolhidoController'
-        
-    });
+    })
+
+    .state('finalizarpedido', {
+        url : '/finalizarpedido/:carro',
+        templateUrl : 'templates/finalizarpedido.html',
+        controller : 'FinalizarPedidoController'
+    })
 });
