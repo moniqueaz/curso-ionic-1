@@ -12,6 +12,16 @@ angular.module('starter')
         controller : 'MenuController'
     })
 
+    .state('app.perfil',{
+        url : '/perfil',
+        views : {
+            'menuContent' : {
+                templateUrl : 'templates/perfil.html',
+                controller : 'PerfilController'
+            }
+        }
+    })
+
     .state('app.listagem',{
           url : '/listagem',
           views : {
@@ -39,4 +49,5 @@ angular.module('starter')
         templateUrl : 'templates/login.html',
         controller: 'LoginController'
     })
+
 });
