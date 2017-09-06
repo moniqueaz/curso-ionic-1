@@ -14,7 +14,8 @@ angular.module('starter')
             callback : function(data){
                 $scope.dataSelecionada = new Date(data);
             },
-            weeksList : ['D', 'S', 'T', 'Q', 'Q', 'S', 'S']
+            weeksList : ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'],
+            monthsList: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"]
         }
         ionicDatePicker.openDatePicker(configuracoes)
     }
