@@ -42,7 +42,7 @@ angular.module('starter')
 
             $ionicPopup.alert({
                 title : 'Parabens',
-                template : 'Você acaba de comprar um carro'
+                template : 'Você acaba de agendar um test drive'
             }).then(function(){
                 $state.go('app.listagem');
             });
