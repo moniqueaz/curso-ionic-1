@@ -6,7 +6,7 @@
             <div class="item item-text-wrap">{{carroEscolhido.nome}}
                 <ul class="list" ng-repeat="acessorio in listaDeAcessorios">
                     <li class="item item-toggle">
-                        {{acessorio.nome}} -R{{acessorio.preco | currency}}
+                        {{acessorio.nome}} - {{acessorio.preco | finance:true:2}}
                         <label class="toggle toggle-assertive">
                             <input type="checkbox" ng-model="isMarcado" ng-click="mudou(acessorio, isMarcado)">
                             <div class="track">
@@ -16,8 +16,8 @@
                         </li>
                 </ul>
             </div>
-            <div class="item item-divider">R{{carroEscolhido.preco | currency}}</div>
+            <div class="item item-divider">{{carroEscolhido.preco | finance:true:2}}</div>
         </div>
-        <a href="#/app/finalizarpedido/{{carroEscolhido}}" class="button button-positive button-full">Finalizar pedido</a>
+        <a href="#/app/finalizarpedido/{{carroEscolhido}}" class="button button-positive button-full">Finalizar agendamento</a>
     </ion-content>
 </ion-view>

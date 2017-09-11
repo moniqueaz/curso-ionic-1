@@ -1,17 +1,18 @@
 angular.module('starter')
 .config(function($stateProvider, $urlRouterProvider){
-
+    
     $urlRouterProvider.otherwise('login'); // rota padrao
-
+    
     $stateProvider
-
+    
     .state('app', {
         url : '/app',
         templateUrl : 'templates/menu.html',
         abstract : true,
         controller : 'MenuController'
     })
-
+    
+    // Menu
     .state('app.perfil',{
         url : '/perfil',
         views : {
@@ -21,6 +22,17 @@ angular.module('starter')
             }
         }
     })
+    
+    .state('app.agendamentos', {
+        url : '/agendamentos',
+        views : {
+            'menuContent' : {
+                templateUrl : 'templates/agendamentos.html',
+                controller : 'AgendamentoController'
+            }
+        }
+      })
+    // fim menu
 
     .state('app.listagem',{
           url : '/listagem',
@@ -52,10 +64,12 @@ angular.module('starter')
         }
     })
 
+
     .state('login', {
         url : '/login',
         templateUrl : 'templates/login.html',
         controller: 'LoginController'
     })
+
 
 });
